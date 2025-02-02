@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+    <head>
+        <title> WORK FLOW </title>
+        <div class="content">
+        <style>
+            html, body {
+                border-radius: 20;
+              height: 100%;
+              margin: 500;
+              display: grid;
+              place-items: center;
+            }
+            .content {
+                border-radius: 10%;
+              width: 80%;
+              padding: 60px;
+              text-align: lift;
+              background-color: rgb(35, 196, 245);
+            }
+          </style>
+    </head>
+    < <body style="background-image: url(https://th.bing.com/th/id/OIF.GrNIsFJCEGBqCmH8Enn1Yw?rs=1&pid=ImgDetMain)">
+        <form bg color="cyan">
+            <fieldset>
+                <legend><em><h2> PassportImage </em></h2></legend>
+                <table> 
+                    <h3>Upload Your Passport Picture</h3>
+                    <form action="/submit" method="POST" enctype="multipart/form-data">
+                        <label for="passportPic">Select your passport picture:</label>
+                        <input type="file" id="passportPic" name="passportPic" accept="image/*" required>
+                        <br><br>
+                        <button type="submit">Upload</button>
+                    </form>
+                
+                    <!-- Display uploaded image after submission (this requires back-end support) -->
+                    <div id="uploadedImage" style="margin-top: 20px;">
+                        <h3>Your Uploaded Passport Picture:</h3>
+                        <img id="passportImage" src="" alt="Uploaded Image" style="max-width: 300px;">
+                    </div>
+                
+                    <script>
+                        // Simple client-side preview of the image before uploading
+                        document.getElementById('passportPic').addEventListener('change', function(event) {
+                            const file = event.target.files[0];
+                            if (file) {
+                                const reader = new FileReader();
+                                reader.onload = function(e) {
+                                    document.getElementById('passportImage').src = e.target.result;
+                                    document.getElementById('uploadedImage').style.display = 'block';
+                                };
+                                reader.readAsDataURL(file);
+                            }
+                        });
+                    </script>
+                    </form>
+                </table>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <legend><em><h2> Personal Informaton </h2></em></legend>
+                <table>
+                    <tr>
+                        <td>
+                           <label for="name">SUR NAME</label>
+                        </td>
+                        <td>
+                            <input id="name" type="text">
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <label for="name">FIRST NAME</label>
+                        </td>
+                        <td>
+                            <input id="name" type="text">
+                         </td>
+                    </tr>
+                    <tr>
+                        <td>
+                           <label for="name">MIDDLE NAME</label>
+                        </td>
+                        <td>
+                            <input id="name" type="text">
+                         </td>
+                    </tr>
+                </table><br> <br>
+              EMAIL:<input type="email" /> <br><br>
+              DATE OF BIRTH: <input type="date" />  <br> <br>
+              CONTACT:<input type="tel+233" /> <br><br>
+              HOUSE NO: <input type="text" /><br><br>
+              POSTAL ADDRESS: <input type="text" /><br> 
+              <em><b><i>SEX</i></b></em> <br>
+              MALE: <input type="checkbox" /> <br>
+              FEMALE: <input type="checkbox" />
+            </fieldset>
+        </form><br>
+      </div>
+   <BUTTON align="right"> <a href="C:\Users\anane elvis\Desktop\html\EDUCATION.HTML"> NEXT</a> </BUTTON>
+    </body>
+</html>

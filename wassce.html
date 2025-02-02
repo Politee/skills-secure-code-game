@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Candidate Selection Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 15px;
+    }
+    select, input {
+      width: 200px;
+      padding: 5px;
+      margin-top: 5px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Candidate Selection Form</h1>
+  <form action="submit_form.php" method="POST">
+    
+    <!-- Subject Selection -->
+    <div class="form-group">
+      <label for="subjects">Choose Subjects:</label>
+      <select id="subjects" name="subjects[]" multiple>
+        <option value="mathematics">Mathematics</option>
+        <option value="english">English</option>
+        <option value="science">Science</option>
+        <option value="history">History</option>
+        <option value="geography">Geography</option>
+      </select>
+      <small>Hold down the 'Ctrl' (Windows) or 'Command' (Mac) key to select multiple subjects.</small>
+    </div>
+
+    <!-- Type of Examination -->
+    <div class="form-group">
+      <label for="exam_type">Select Type of Examination:</label>
+      <select id="exam_type" name="exam_type">
+        <option value="online">Online</option>
+        <option value="in_person">In-Person</option>
+        <option value="oral">Oral</option>
+      </select>
+    </div>
+
+    <!-- Grade Selection -->
+    <div class="form-group">
+      <label for="grade">Select Grade:</label>
+      <select id="grade" name="grade">
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+        <option value="F">F</option>
+      </select>
+    </div>
+
+    <button type="https://mail.google.com/mail/u/0/#inbox">Submit</button>
+    
+  </form>
+
+</body>
+</html>
